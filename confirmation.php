@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $city = $conn->real_escape_string($_POST['city'][$i]);
         $zipcode = $conn->real_escape_string($_POST['zipcode'][$i]);
 
-        $sql = "INSERT INTO adress (street, street_nb, type, city, zipcode) 
+        $sql = "INSERT INTO address (street, street_nb, type, city, zipcode) 
                 VALUES ('$street', '$street_nb', '$type', '$city', '$zipcode')";
 
         if ($conn->query($sql) !== TRUE) {
